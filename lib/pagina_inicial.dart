@@ -1,7 +1,10 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, avoid_print, sort_child_properties_last, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:meuapp/chamadas.dart';
 import 'package:meuapp/conversas.dart';
+import 'package:meuapp/status.dart';
+
 
 class PaginaInicial extends StatelessWidget {
   const PaginaInicial({super.key});
@@ -45,7 +48,11 @@ class PaginaInicial extends StatelessWidget {
             backgroundColor: Color.fromARGB(255, 0, 136, 204),
             onPressed: () {},
           ),
-          body: Conversas(),
+          body: TabBarView(children: [
+            Conversas(),
+            Status(),
+            Chamadas(),
+          ]),
       )
     );
   }
