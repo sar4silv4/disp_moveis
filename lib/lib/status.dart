@@ -38,10 +38,13 @@ class Status extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 69, 105, 69)
-                    ),            ),
+                    ),     
+                  ),
+                  SizedBox(width: 8,),
               Icon(Icons.verified, 
                    size: 18,
-                   color: Color.fromARGB(255, 71, 214, 75),),
+                   color: Color.fromARGB(255, 71, 214, 75),
+              ),
             ],
           ),
         ),
