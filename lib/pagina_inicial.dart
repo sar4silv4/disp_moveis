@@ -16,7 +16,7 @@ class PaginaInicial extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             title: Text("ZipZap"),
-            backgroundColor: Color.fromARGB(255, 0, 136, 204),
+            backgroundColor: Color.fromARGB(255, 56, 127, 107),
             actions: [
               IconButton(
                 onPressed: () {
@@ -30,13 +30,28 @@ class PaginaInicial extends StatelessWidget {
                 },
                 icon: Icon(Icons.search),
               ),
-              IconButton(
-                onPressed: () {
-                  print("O botão do menu foi clicado");
-                },
-                icon: Icon(Icons.more_vert),
-              ),
-            ],
+              PopupMenuButton ( 
+              onSelected: (item) {
+                if (item == 3) {
+                Navigator.pushNamed(context, '/conversa');
+                }
+              },
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  value: 1,
+                  child: Text('Novo grupo'),
+                ),
+                PopupMenuItem(
+                  value: 2,
+                  child: Text('Nova Transmissão'),
+                ),
+                  PopupMenuItem(
+                  value: 3,
+                  child: Text('Configurações'),
+                ),
+              ],
+            ),
+          ],
             bottom: TabBar(tabs: [
               Tab(text: 'Conversas'),
               Tab(text: 'Status'),
@@ -45,7 +60,7 @@ class PaginaInicial extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton(
             child: Icon(Icons.chat),
-            backgroundColor: Color.fromARGB(255, 0, 136, 204),
+            backgroundColor: Color.fromARGB(255, 56, 127, 107),
             onPressed: () {},
           ),
           body: TabBarView(children: [

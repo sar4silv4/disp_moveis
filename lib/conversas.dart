@@ -11,6 +11,7 @@ class Conversas extends StatelessWidget {
       children: [
         ListTile(
           onTap: () {
+            Navigator.pushNamed(context, '/conversa');
             print("a conversa foi clicada");
           },
           leading: CircleAvatar(
