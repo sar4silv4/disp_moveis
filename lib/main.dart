@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:meuapp/pagina_inicial.dart';
+import 'conversa.dart';
 import 'configuracoes.dart';
 
 void main() {
